@@ -9,9 +9,12 @@ namespace Outliers.Models
     {
         class Player
         {
+            public int PlayerId { get; set; }
             public string FirstName { get; set; }  
             public string LastName { get; set; }
-            public string FavoriteFood { get; set; }
+            public string FavoriteFood { get; set; } 
+            public string TeamName { get; set; }
+            public int CreditScore { get; set; }
             public int SiblingCount { get; set; }
             public int MaxBench { get; set; }
             public int FreckleCount { get; set; }
@@ -26,6 +29,8 @@ namespace Outliers.Models
                 this.FirstName = "Sharktooth";
                 this.LastName = "O'Shannigan";
                 this.FavoriteFood = null;
+                this.TeamName = null;
+                this.CreditScore = 600;
                 this.MaxBench = 0;
                 this.SiblingCount = 0;
                 this.MaxBench = 0;
@@ -38,13 +43,15 @@ namespace Outliers.Models
 
             }
 
-            public Player(string firstName, string lastName, string favoriteFood, int siblingCount, int maxBench, int freckleCount,
+            public Player(string firstName, string lastName, string favoriteFood, string teamName, int creditScore, int siblingCount, int maxBench, int freckleCount,
                 float strideLength, float bicepWidth, float jockstrapSize, float shoeSize, float jumpHeight)
             {
                 this.FirstName = firstName;
                 this.LastName = lastName;
                 this.FavoriteFood = favoriteFood;
+                this.TeamName = teamName;
                 this.SiblingCount = siblingCount;
+                this.CreditScore = creditScore;
                 this.MaxBench = maxBench;
                 this.FreckleCount = freckleCount;
                 this.StrideLength = strideLength;
